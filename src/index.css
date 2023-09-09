@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ff00d4, #00ddff);
+}
+
+.container {
+  width: 98vmin;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-height: 450px;
+  overflow-y: auto;
+}
+.container h1 {
+  text-align: center;
+}
+.task_container {
+  margin: 10px 0px 10px 0px;
+}
+/* width */
+.container::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.container::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+/* Handle */
+.container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+#form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#form input {
+  width: 100%;
+  padding: 15px 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 1rem;
+  font-size: 20px;
+}
+#form input::placeholder {
+  font-size: 1rem;
+}
+#checkBox {
+  width: 20px;
+  height: 20px;
+  margin-right: 1rem;
+  outline: none;
+}
+.task_container input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.task p {
+  margin: 0;
+  font-size: 20px;
+  padding: 3px;
+  word-break: break-all;
+}
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid lightgray;
+  padding: 5px;
+  margin-bottom: 1rem;
+}
+.task label {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-right: 1rem;
+  width: 100%;
+}
+
+#form #addTask {
+  background-color: rgb(2, 173, 2);
+  color: white;
+  border: none;
+  padding: 12px 12px;
+  outline: none;
+  font-size: 17px;
+  border-radius: 8px;
+  white-space: nowrap;
+}
+
+.addbtn:disabled {
+  cursor: default;
+  opacity: 0.4;
+}
+.addbtn:not(:disabled) {
+  cursor: pointer;
+  opacity: 1;
+}
+.btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn {
+  /* background-color: #4caf50; */
+  border: none;
+  outline: none;
+  color: white;
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.editbtn {
+  background-color: #0d6efd;
+  margin-right: 1rem;
+}
+.delbtn {
+  background-color: red;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+.completed {
+  text-decoration: line-through;
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.clearbtn {
+  background-color: rgb(30, 176, 225);
+  opacity: 0.5;
+  cursor: default;
+}
+
+.clearbtn_active {
+  background-color: rgb(3, 147, 195);
+  opacity: 1;
+  cursor: pointer;
+}
