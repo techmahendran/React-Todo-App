@@ -2,27 +2,7 @@ import { useEffect, useState } from "react";
 import Tasks from "./components/Tasks";
 import Footer from "./components/Footer";
 
-// const getTodos = () => {};
-// [
-//   {
-//     id: 1,
-//     fname: "mahe",
-//     completed: true,
-//   },
-//   {
-//     id: 2,
-//     fname: "venkat",
-//     completed: false,
-//   },
-//   {
-//     id: 3,
-//     fname: "senthil",
-//     completed: false,
-//   },
-// ];
-// const todoLists = localStorage.getItem("todos") || [];
 const App = () => {
-  // eslint-disable-next-line no-use-before-define
   const [tasks, setTasks] = useState(() => {
     const getItems = localStorage.getItem("todos");
     if (getItems === null) {
@@ -35,6 +15,7 @@ const App = () => {
   const [values, setvalues] = useState("");
   const [toggleSubmit, setToggleSubmit] = useState(false);
   const [isEditTodo, setIsEditTodo] = useState(null);
+
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(tasks));
   }, [tasks]);
@@ -51,7 +32,9 @@ const App = () => {
           return task;
         })
       );
+
       setToggleSubmit(false);
+
       setvalues("");
     } else {
       const id = tasks.length ? tasks[tasks.length - 1].id + 1 : 1;
@@ -75,7 +58,7 @@ const App = () => {
     setTasks(checkBox);
   };
 
-  // editTodo
+  // editTodo Fun
 
   const editTodo = (id) => {
     const editTodo = tasks.find((task) => task.id === id);
