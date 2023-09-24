@@ -20,6 +20,7 @@ const App = () => {
     localStorage.setItem("todos", JSON.stringify(tasks));
   }, [tasks]);
 
+  // addTodoItems
   const addTodoItems = () => {
     if (!values) {
       alert("enter Field");
@@ -50,6 +51,7 @@ const App = () => {
     }
   };
 
+  // toggleCheckBox
   const toggleCheckBox = (id) => {
     const checkBox = tasks.map((task) => {
       return task.id === id ? { ...task, completed: !task.completed } : task;
@@ -58,8 +60,7 @@ const App = () => {
     setTasks(checkBox);
   };
 
-  // editTodo Fun
-
+  // editTodo
   const editTodo = (id) => {
     const editTodo = tasks.find((task) => task.id === id);
 

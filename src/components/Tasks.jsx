@@ -12,6 +12,7 @@ const Tasks = ({
 }) => {
   const addTodosTask = (e) => {
     e.preventDefault();
+
     // addTodos Submit Function
     addTodos();
   };

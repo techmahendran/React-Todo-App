@@ -11,6 +11,7 @@ const Task = ({ taskList, onDeleteTask, editTodo, ontoggleCheckBox }) => {
                 checked={task.completed}
                 onChange={() => ontoggleCheckBox(task.id)}
               />
+
               <p className={task.completed ? "completed" : ""}>{task.fname}</p>
             </label>
 
